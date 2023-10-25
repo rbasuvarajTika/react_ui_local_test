@@ -4,7 +4,7 @@ import Pagination from "./Pagination";
 
 const TableList = ({search}) => {
     const [currentpage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostPerPage] = useState(14)
+    const [postsPerPage, setPostPerPage] = useState(10)
     
 
     const lastPostIndex = currentpage * postsPerPage;
@@ -21,6 +21,7 @@ const TableList = ({search}) => {
                      totalPosts={data.length} 
                      postsPerPage={postsPerPage} 
                      setCurrentPage={setCurrentPage}
+                     setPostPerPage={setPostPerPage}
                      currentPage={currentpage }
                      lastPostIndex={lastPostIndex}
                      npage={npage}
